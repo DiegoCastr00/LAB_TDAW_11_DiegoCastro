@@ -3,19 +3,19 @@ const sectionnn = document.querySelectorAll('.nueva_img');
 
 var filtro = document.getElementById("filtro");
 var tabla = document.getElementById("tabla");
-// Agregar un evento change al elemento select
-filtro.addEventListener("change", function() {
-  // Obtener el valor seleccionado del elemento select
+var filtroForm = document.getElementById("filtroForm");
+
+
+filtroForm.addEventListener("submit", function(event) {
+  event.preventDefault(); 
   var valorFiltro = filtro.value;
   console.log(valorFiltro)
-  // Recorrer todas las filas de la tabla
   for (var i = 0; i < tabla.rows.length; i++) {
     var fila = tabla.rows[i];
     console.log(fila)
       var valorCelda = fila.cells[5].innerHTML;
     console.log(valorCelda)
 
-    // Ocultar o mostrar la fila dependiendo del valor seleccionado
       if (valorFiltro == "Género" || valorFiltro === valorCelda ) {
         
       console.log(valorCelda)
@@ -26,14 +26,6 @@ filtro.addEventListener("change", function() {
     }
   }
 });
-
-
-
-
-
-
-
-
 
 
 function copiasrc(imagenes,nuevaImagen){
