@@ -77,4 +77,23 @@ table tbody td:first-child  {
     padding: 0.5em 0em;
 }
 
+.secimg{
+    float: right;
+    display: flex;  
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    height: 15%;
+    width: 10%;
+    margin-left: 7em;
+    transform: translateY(-50%);
+    background-color: #ffffff;
+    padding: 0.5em;
+    border: 0.3em solid #000000;
+
+}
+
+.secimg img{
+    height: 90%;
+}
 
